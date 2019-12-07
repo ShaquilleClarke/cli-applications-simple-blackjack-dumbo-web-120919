@@ -28,9 +28,19 @@ def initial_round
   return first_round    # code #initial_round here
 end
 
-def hit?
-  # code hit? here
+def hit?(card_total)
+  player_input = ["h", "s"]
+  prompt_user
+  user_input = get_user_input
+  until player_input.include?(user_input)
+    invalid_command
+    prompt_user
+    user_input = get_user_input
+  end
+  if user_input == "h"
+    card_total += deal_card
 end
+card_total
 
 def invalid_command
   # code invalid_command here
