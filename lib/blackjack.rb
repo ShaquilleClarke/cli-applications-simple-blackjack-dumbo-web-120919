@@ -43,7 +43,7 @@ end
 card_total
 
 def invalid_command
-  # code invalid_command here
+  puts "Please enter a valid command" # code invalid_command here
 end
 
 #####################################################
